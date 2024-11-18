@@ -1,11 +1,10 @@
 import React from "react";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Typography, Link } from "@mui/material";
 
-
-export function InspirationalCard({ title, image, description }) {
+export function InspirationalCard({ title, image, description, link }) {
   return (
     <Card
-      id="stories" 
+      id="stories"
       style={{
         display: "flex",
         flexDirection: "row",
@@ -45,6 +44,18 @@ export function InspirationalCard({ title, image, description }) {
         >
           {description}
         </Typography>
+        <Link
+          href={link}
+          style={{
+            marginTop: "20px",
+            textDecoration: "none",
+            fontSize: "16px",
+            color: "var(--link-color)",
+            fontWeight: "bold",
+          }}
+        >
+          Ver Mais
+        </Link>
       </CardContent>
     </Card>
   );
