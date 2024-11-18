@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const CARBON_INTERFACE_API_KEY = "vaJ1D31Sd2YN73E0Anr1BA";
-const CARBON_INTERFACE_API_URL = "https://www.carboninterface.com/api/v1";
+const CARBON_INTERFACE_API_KEY = import.meta.env.VITE_CARBON_INTERFACE_API_KEY
+const CARBON_INTERFACE_API_URL = import.meta.env.VITE_CARBON_INTERFACE_API_URL
 
 export const api = axios.create({
   baseURL: CARBON_INTERFACE_API_URL,
