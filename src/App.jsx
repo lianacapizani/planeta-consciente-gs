@@ -27,8 +27,8 @@ export function App() {
         <AboutSection />
         <CarouselStories />
         <ImpactCalculator />
-        <Guide />
         <Ambassadors />
+        <Guide />
       </ThemeProvider>
     </>
   );

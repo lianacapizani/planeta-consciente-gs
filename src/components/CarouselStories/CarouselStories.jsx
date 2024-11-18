@@ -57,4 +57,5 @@ export function CarouselStories() {
         </div>
       </Carousel>
     </Container>
-  );}
+  );
+}

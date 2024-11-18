@@ -1,4 +1,4 @@
-:root{
+:root {
   --bg-color: #091615;
   --bg-card: #9bae9e;
   --bg-button: #739e2f;
@@ -13,42 +13,45 @@
   --test: #3b403c84;
 }
 
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &&{
+  && {
     background-color: var(--bg-color);
     color: var(--light-text);
   }
-    box-sizing: border-box;
-    overflow-x: hidden;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 button {
-    font: inherit;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 /* Inputs */
-input, textarea, select {
-    font: inherit;
+input,
+textarea,
+select {
+  font: inherit;
 }
 
-input:focus, textarea:focus, select:focus {
-    outline: none;
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
-

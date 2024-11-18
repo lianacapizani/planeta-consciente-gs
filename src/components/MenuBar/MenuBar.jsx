@@ -63,7 +63,6 @@ export function MenuBar() {
               display: { xs: "none", md: "flex" },
               justifyContent: "center",
               width: "100%",
-              fontWeight: "bold",
               gap: "20px",
             }}
           >
@@ -71,6 +70,7 @@ export function MenuBar() {
               <Button
                 key={item.id}
                 color="inherit"
+                sx={{ fontWeight: "600" }}
                 onClick={() => scrollToSection(item.id)}
               >
                 {item.label}
@@ -86,10 +86,10 @@ export function MenuBar() {
         open={drawerOpen}
         onClose={toggleDrawer(false)}
         sx={{
-          display: { xs: "block", md: "none" }, 
+          display: { xs: "block", md: "none" },
           "& .MuiDrawer-paper": {
             backgroundColor: "var(--bg-menu)",
-            color: "white", 
+            color: "white",
           },
         }}
       >
