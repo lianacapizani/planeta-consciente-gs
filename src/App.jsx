@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import './styles/App.css'
+import React from "react";
+import { Banner } from "./components/Banner/Banner";
+import { AboutSection } from "./components/AboutSection/AboutSection";
+import { CarouselStories } from "./components/CarouselStories/CarouselStories";
+import { ImpactCalculator } from "./components/ImpactCalculator/impactCalculator";
+import { MenuBar } from "./components/MenuBar/MenuBar";
+import { Guide } from "./components/Guide/Guide";
+import { Ambassadors } from "./components/Ambassadors/Ambassadors";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./styles/App.css";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
+  const theme = createTheme({
+    typography: {
+      fontFamily: '"Quicksand", sans-serif',
+    },
+  });
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <MenuBar />
+        <Banner />
+        <AboutSection />
+        <CarouselStories />
+        <ImpactCalculator />
+        <Guide />
+        <Ambassadors />
+      </ThemeProvider>
     </>
-  )
+  );
 }
-
-export default App
