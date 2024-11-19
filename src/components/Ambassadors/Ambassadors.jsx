@@ -4,10 +4,8 @@ import {
   Typography,
   Button,
   Grid,
-  Box,
   Paper,
   Divider,
-  getOverlayAlpha,
 } from "@mui/material";
 import { Title } from "../../common-components/Title";
 
@@ -17,7 +15,7 @@ export function Ambassadors() {
     <Container
       sx={{
         backgroundColor: "var(--bg-maxCard)",
-        padding: "60px 0",
+        padding: "40px 0",
         borderRadius: "8px",
         maxWidth: "90%",
       }}
@@ -34,7 +32,7 @@ export function Ambassadors() {
       </Typography>
 
       {/* Grid de Cards */}
-      <Grid container spacing={4} justifyContent="center" >
+      <Grid container spacing={4} justifyContent="center">
         {/* Card de Benefícios */}
         <Grid item xs={12} md={5}>
           <Paper
@@ -108,7 +106,7 @@ export function Ambassadors() {
               variant="body1"
               align="center"
               paragraph
-              sx={{ fontSize: "1rem"}}
+              sx={{ fontSize: "1rem" }}
             >
               Torne-se um Embaixador do Verde e tenha acesso a conteúdos
               exclusivos, como guias, artigos e eventos ao vivo, enquanto
@@ -119,9 +117,10 @@ export function Ambassadors() {
               variant="contained"
               style={{
                 backgroundColor: "var(--bg-button2)",
-                fontWeight: "bold",
+                fontSize: "15px",
+                padding: "8px 20px",
               }}
-            //   onClick= {handleForm} 
+              //   onClick= {handleForm}
             >
               Inscreva-se Agora
             </Button>

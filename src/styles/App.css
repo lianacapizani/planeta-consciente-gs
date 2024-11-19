@@ -16,8 +16,8 @@
     padding: 20px 10px;
 }
 
-.calculator .textField {
-    background-color: var(--bg-card);
+.calculator .textField , .selectForm{
+    background-color: var(--bg-card-green);
     height:60px;
     stroke: none;
     border-radius: 4px;

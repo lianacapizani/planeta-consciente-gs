@@ -26,7 +26,7 @@ export function InspirationalCard({ title, image, description, link }) {
           flexDirection: "column",
           justifyContent: "center",
           padding: "30px",
-          backgroundColor: "var(--bg-card)",
+          backgroundColor: "var(--bg-card-blue)",
           textAlign: "left",
           height: "340px",
         }}

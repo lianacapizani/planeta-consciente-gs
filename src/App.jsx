@@ -6,6 +6,7 @@ import { ImpactCalculator } from "./components/ImpactCalculator/impactCalculator
 import { MenuBar } from "./components/MenuBar/MenuBar";
 import { Guide } from "./components/Guide/Guide";
 import { Ambassadors } from "./components/Ambassadors/Ambassadors";
+import { Challenges } from "./components/Challenges/Challenges";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./styles/App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -27,6 +28,7 @@ export function App() {
         <AboutSection />
         <CarouselStories />
         <ImpactCalculator />
+        <Challenges />
         <Ambassadors />
         <Guide />
       </ThemeProvider>

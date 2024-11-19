@@ -57,10 +57,10 @@ export function Guide() {
           variant="contained"
           startIcon={<DownloadIcon />}
           sx={{
-              padding: "10px 20px",
-              fontWeight: "bold",
+              padding: "8px 20px",
+              fontWeight: "500",
               textTransform: "none",
-              backgroundColor:"var(--bg-button2)",
+              backgroundColor:"var(--bg-button)",
           }}
         >
           Baixar Guia Verde

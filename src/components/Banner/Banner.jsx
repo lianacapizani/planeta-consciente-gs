@@ -30,7 +30,7 @@ export function Banner() {
         <Button
           variant="contained"
           size="large"
-          style={{ fontWeight: "bold", backgroundColor: "var(--bg-button)" }}
+          style={{ backgroundColor: "var(--bg-button)", fontSize: "16px" ,  }}
         >
           Junte-se agora
         </Button>

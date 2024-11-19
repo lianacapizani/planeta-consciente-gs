@@ -7,6 +7,8 @@ import {
   Box,
   Paper,
   Grid,
+  MenuItem, FormControl, InputLabel, Select 
+
 } from "@mui/material";
 import { api } from "../../services/api";
 import { Title } from "../../common-components/Title";
@@ -18,9 +20,11 @@ export function ImpactCalculator() {
   const [gas, setGas] = useState("");
   const [result, setResult] = useState(null);
 
-  
+  const handleChange = (event) => {
+    setRenewables(event.target.value);
+  };
+
   const handleCalculate = async () => {
- 
     const calculatedImpact = await calculateImpact(
       consumption,
       frequency,
@@ -65,7 +69,7 @@ export function ImpactCalculator() {
 
   return (
     <Container id="calculator" className="calculator">
-      <Title sectionName="Calculadora de Impacto Individual"/>
+      <Title sectionName="Calculadora de Impacto Individual" />
       <Paper
         style={{
           padding: "20px 20px",
@@ -102,6 +106,23 @@ export function ImpactCalculator() {
             />
           </Grid>
           <Grid item xs={12} sm={6}>
+            <FormControl variant="filled" fullWidth className="selectForm">
+              <InputLabel id="renewables-label">
+                Já utiliza fontes de energia renovável?
+              </InputLabel>
+              <Select
+                labelId="renewables-label"
+                id="renewables-select"
+                value={renewables}
+                sx={{ backgroundColor: "var(--bg-card-green)" }}
+                onChange={handleChange}
+              >
+                <MenuItem value="sim">Sim</MenuItem>
+                <MenuItem value="nao">Não</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          {/* <Grid item xs={12} sm={6}>
             <TextField
               className="textField"
               label="Já utiliza fontes de energia renovável?"
@@ -110,7 +131,7 @@ export function ImpactCalculator() {
               value={renewables}
               onChange={(e) => setRenewables(e.target.value)}
             />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={6}>
             <TextField
               className="textField"
@@ -127,7 +148,10 @@ export function ImpactCalculator() {
         <Box textAlign="center" marginTop="40px">
           <Button
             variant="contained"
-            style={{ backgroundColor: "var(--bg-button2)", fontWeight: "bold" }}
+            style={{
+              backgroundColor: "var(--bg-button2)",
+              padding: "8px 20px",
+            }}
             onClick={handleCalculate}
           >
             Calcular Impacto

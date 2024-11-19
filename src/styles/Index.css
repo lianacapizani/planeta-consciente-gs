@@ -1,6 +1,7 @@
 :root {
   --bg-color: #091615;
-  --bg-card: #9bae9e;
+  --bg-card-green: #9bae9e;
+  --bg-card-blue: #cddddd;
   --bg-button: #739e2f;
   --bg-button2: #297b4e;
   --bg-menu: #505e52;
@@ -11,6 +12,7 @@
   --calculator: #91a39400;
   --bg-maxCard: rgba(163, 222, 211, 0.484);
   --test: #3b403c84;
+  --bg-chip: #01677e;
 }
 
 body {
