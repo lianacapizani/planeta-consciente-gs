@@ -36,8 +36,8 @@ export function MenuBar() {
     { id: "home", label: "Inicio" },
     { id: "about", label: "Sobre" },
     { id: "stories", label: "Histórias" },
-    { id: "challenges", label: "Desafios" },
     { id: "calculator", label: "Calculadora" },
+    { id: "challenges", label: "Desafios" },
     { id: "guides", label: "Guias" },
     { id: "join", label: "Embaixadores" },
   ];

@@ -8,12 +8,11 @@ import { Title } from "../../common-components/Title";
 export function AboutSection() {
   return (
     <Box
-      id="about"
       sx={{
         padding: "40px 0",
       }}
     >
-      <Container maxWidth="lg" style={{ marginTop: "40px" }}>
+      <Container id="about" maxWidth="lg" style={{ marginTop: "40px" }}>
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
             <Box
@@ -32,7 +31,7 @@ export function AboutSection() {
           </Grid>
 
           <Grid item xs={12} md={6} sx={{ maxWidth: "90%" }}>
-            <Title sectionName="Sobre"/>
+            <Title sectionName="Sobre" />
             <Typography
               variant="body1"
               sx={{

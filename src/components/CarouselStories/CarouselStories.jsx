@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import { Title } from "../../common-components/Title";
 export function CarouselStories() {
   return (
-    <Container style={{ marginTop: "100px" }}>
+    <Container id="stories" style={{ marginTop: "100px" }}>
       <Title sectionName="Histórias Inspiradoras" />
       <Carousel>
         <div>

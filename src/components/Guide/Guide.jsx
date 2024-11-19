@@ -6,6 +6,7 @@ import { Title } from "../../common-components/Title";
 export function Guide() {
   return (
     <Box
+    id="guides"
       sx={{
         padding: "40px 20px",
         textAlign: "center",

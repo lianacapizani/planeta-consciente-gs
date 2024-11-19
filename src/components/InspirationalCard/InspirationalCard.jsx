@@ -4,7 +4,6 @@ import { Card, CardContent, Typography, Link } from "@mui/material";
 export function InspirationalCard({ title, image, description, link }) {
   return (
     <Card
-      id="stories"
       style={{
         display: "flex",
         flexDirection: "row",

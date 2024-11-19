@@ -114,7 +114,7 @@ export function ImpactCalculator() {
                 labelId="renewables-label"
                 id="renewables-select"
                 value={renewables}
-                sx={{ backgroundColor: "var(--bg-card-green)" }}
+                sx={{ backgroundColor: "var(--bg-card-blue)" }}
                 onChange={handleChange}
               >
                 <MenuItem value="sim">Sim</MenuItem>

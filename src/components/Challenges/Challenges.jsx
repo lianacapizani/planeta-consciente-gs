@@ -9,14 +9,16 @@ import {
   CardContent,
   Chip,
 } from "@mui/material";
+import { Title } from "../../common-components/Title";
 
 export function Challenges() {
   return (
     <Box
+      id="challenges"
       sx={{
         position: "relative",
         backgroundImage:
-          "linear-gradient(to bottom, rgba(8, 22, 21, 1) 0% ,rgba(200, 220, 221, 0.1) 50%, rgba(9, 22,21, 1 )), url(/assets/images/challenges2.png)",
+          "linear-gradient(to bottom, rgba(8, 22, 21, .8) 0% ,rgba(200, 220, 221, 0.1) 50%, rgba(9, 22,21, .9 )), url(/assets/images/challenges2.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "var(--light-text)",
@@ -39,21 +41,7 @@ export function Challenges() {
       />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        {/* Título */}
-        <Typography
-          variant="h2"
-          align="center"
-          sx={{
-            fontWeight: 700,
-            fontSize: "2.5rem",
-            color: "var(--title)",
-            marginBottom: "20px",
-          }}
-        >
-          Desafios do Planeta Positivo
-        </Typography>
-
-        {/* Subtítulo */}
+        <Title sectionName=" Desafios do Planeta Positivo" />
         <Typography
           variant="body1"
           align="center"
@@ -66,7 +54,6 @@ export function Challenges() {
           Transforme a sustentabilidade em um jogo e ganhe recompensas
           exclusivas enquanto ajuda a cuidar do planeta.
         </Typography>
-
         <Grid container spacing={4}>
           {/* Desafio 1 */}
           <Grid item xs={12} md={4}>
@@ -88,8 +75,8 @@ export function Challenges() {
                   Desafio de Economia de Energia
                 </Typography>
                 <Typography variant="body2" sx={{ marginBottom: "20px" }}>
-                  Comprometa-se a reduzir seu consumo de energia em{" "}
-                  <strong>X%</strong> durante um mês.
+                  Comprometa-se a reduzir o seu consumo de energia em{" "}
+                  <strong>10%</strong> durante um mês.
                 </Typography>
                 <Chip
                   label="🌱 Sustentabilidade"
@@ -173,15 +160,15 @@ export function Challenges() {
             </Card>
           </Grid>
         </Grid>
-
         {/* Sistema de Pontuação */}
-        <Box sx={{ textAlign: "center", marginTop: "40px" }}>
+        <Box sx={{ textAlign: "center", marginTop: "50px" }}>
           <Typography
-            variant="h4"
+            variant="h3"
             sx={{
               color: "var(--title)",
               fontWeight: 700,
               marginBottom: "20px",
+              fontSize: "26px",
             }}
           >
             Sistema de Pontuação e Recompensas
@@ -196,7 +183,7 @@ export function Challenges() {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: "var(--bg-button)",
+              backgroundColor: "var(--bg-button2)",
               color: "var(--light-text)",
               fontSize: "15px",
               padding: "8px 20px",

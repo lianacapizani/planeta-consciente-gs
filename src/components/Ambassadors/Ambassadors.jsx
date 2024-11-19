@@ -13,6 +13,7 @@ export function Ambassadors() {
 
   return (
     <Container
+      id="join"
       sx={{
         backgroundColor: "var(--bg-maxCard)",
         padding: "40px 0",

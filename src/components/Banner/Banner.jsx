@@ -9,7 +9,7 @@ export function Banner() {
           "linear-gradient(to bottom, rgba(8, 22, 21, 0.1), rgba(9, 22,21, 1 )), url(/assets/images/banner.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "500px",
+        height: "70vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

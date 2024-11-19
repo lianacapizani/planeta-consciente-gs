@@ -17,7 +17,7 @@
 }
 
 .calculator .textField , .selectForm{
-    background-color: var(--bg-card-green);
+    background-color: var(--bg-card-blue);
     height:60px;
     stroke: none;
     border-radius: 4px;
