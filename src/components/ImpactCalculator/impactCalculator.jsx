@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { api } from "../../services/api";
 import { Title } from "../../common-components/Title";
+import { styled } from "@mui/system";
 
 export function ImpactCalculator() {
   const [consumption, setConsumption] = useState("");
@@ -114,8 +115,8 @@ export function ImpactCalculator() {
                 labelId="renewables-label"
                 id="renewables-select"
                 value={renewables}
-                sx={{ backgroundColor: "var(--bg-card-blue)" }}
                 onChange={handleChange}
+                type="string"
               >
                 <MenuItem value="sim">Sim</MenuItem>
                 <MenuItem value="nao">Não</MenuItem>

@@ -1,24 +1,66 @@
 import React from "react";
 import {
   Container,
-  Grid,
   Box,
   Typography,
-  Button,
   Card,
   CardContent,
   Chip,
+  IconButton,
+  Button,
 } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Title } from "../../common-components/Title";
 
 export function Challenges() {
+  const scrollContainer = React.useRef();
+
+  const scrollLeft = () => {
+    scrollContainer.current.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollContainer.current.scrollBy({ left: 300, behavior: "smooth" });
+  };
+
+  const challenges = [
+    {
+      title: "Desafio Sustentável",
+      description:
+        "Recolha 10kg de plástico e ganhe cupons de desconto exclusivos.",
+      category: "🌿 Sustentabilidade",
+    },
+    {
+      title: "Economia de Energia",
+      description: "Reduza o consumo energético em 20% na sua casa este mês.",
+      category: "⚡ Eficiência Energética",
+    },
+    {
+      title: "Reciclagem Criativa",
+      description: "Crie um objeto útil usando materiais reciclados.",
+      category: "♻️ Criatividade Sustentável",
+    },
+    {
+      title: "Transporte Verde",
+      description:
+        "Adote o uso de bicicleta ou transporte público por 15 dias.",
+      category: "🚲 Mobilidade Urbana",
+    },
+    {
+      title: "Economia Hídrica",
+      description: "Reduza o consumo de água em 30% durante o próximo mês.",
+      category: "💧 Consumo Consciente",
+    },
+  ];
+
   return (
     <Box
       id="challenges"
       sx={{
         position: "relative",
         backgroundImage:
-          "linear-gradient(to bottom, rgba(8, 22, 21, .8) 0% ,rgba(200, 220, 221, 0.1) 50%, rgba(9, 22,21, .9 )), url(/assets/images/challenges2.png)",
+          "linear-gradient(to bottom, rgba(8, 22, 21, .8) 0% ,rgba(200, 220, 221, 0.1) 50%, rgba(9, 22,21, .9)), url(/assets/images/challenges2.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "var(--light-text)",
@@ -27,7 +69,6 @@ export function Challenges() {
         overflow: "hidden",
       }}
     >
-      {/* Overlay para melhor legibilidade */}
       <Box
         sx={{
           position: "absolute",
@@ -35,13 +76,13 @@ export function Challenges() {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(9, 22, 21, 0.7)", // Cor do overlay para contraste
+          backgroundColor: "rgba(9, 22, 21, 0.7)",
           zIndex: 1,
         }}
       />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        <Title sectionName=" Desafios do Planeta Positivo" />
+        <Title sectionName="Desafios do Planeta Positivo" />
         <Typography
           variant="body1"
           align="center"
@@ -54,145 +95,123 @@ export function Challenges() {
           Transforme a sustentabilidade em um jogo e ganhe recompensas
           exclusivas enquanto ajuda a cuidar do planeta.
         </Typography>
-        <Grid container spacing={4}>
-          {/* Desafio 1 */}
-          <Grid item xs={12} md={4}>
-            <Card
-              sx={{
-                backgroundColor: "var(--bg-card-blue)",
-                padding: "20px",
-                borderRadius: "10px",
-                boxShadow: "0 4px 10px var(--test)",
-                transition: "0.3s",
-                "&:hover": { transform: "scale(1.05)" },
-              }}
-            >
-              <CardContent>
-                <Typography
-                  variant="h5"
-                  sx={{ color: "var(--dark-text)", marginBottom: "15px" }}
-                >
-                  Desafio de Economia de Energia
-                </Typography>
-                <Typography variant="body2" sx={{ marginBottom: "20px" }}>
-                  Comprometa-se a reduzir o seu consumo de energia em{" "}
-                  <strong>10%</strong> durante um mês.
-                </Typography>
-                <Chip
-                  label="🌱 Sustentabilidade"
-                  sx={{
-                    backgroundColor: "var(--bg-chip)",
-                    color: "var(--light-text)",
-                    letterSpacing: "1px",
-                  }}
-                />
-              </CardContent>
-            </Card>
-          </Grid>
 
-          {/* Desafio 2 */}
-          <Grid item xs={12} md={4}>
-            <Card
-              sx={{
-                backgroundColor: "var(--bg-card-blue)",
-                padding: "20px",
-                borderRadius: "10px",
-                boxShadow: "0 4px 10px var(--test)",
-                transition: "0.3s",
-                "&:hover": { transform: "scale(1.05)" },
-              }}
-            >
-              <CardContent>
-                <Typography
-                  variant="h5"
-                  sx={{ color: "var(--dark-text)", marginBottom: "15px" }}
-                >
-                  Desafio de Mobilidade Sustentável
-                </Typography>
-                <Typography variant="body2" sx={{ marginBottom: "20px" }}>
-                  Troque o uso do carro por transporte público ou bicicleta ao
-                  menos uma vez na semana.
-                </Typography>
-                <Chip
-                  label="🚴 Mobilidade"
-                  sx={{
-                    backgroundColor: "var(--bg-chip)",
-                    color: "var(--light-text)",
-                    letterSpacing: "1px",
-                  }}
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Desafio 3 */}
-          <Grid item xs={12} md={4}>
-            <Card
-              sx={{
-                backgroundColor: "var(--bg-card-blue)",
-                padding: "20px",
-                borderRadius: "10px",
-                boxShadow: "0 4px 10px var(--test)",
-                transition: "0.3s",
-                "&:hover": { transform: "scale(1.05)" },
-              }}
-            >
-              <CardContent>
-                <Typography
-                  variant="h5"
-                  sx={{ color: "var(--dark-text)", marginBottom: "15px" }}
-                >
-                  Desafio Verde para Empresas
-                </Typography>
-                <Typography variant="body2" sx={{ marginBottom: "20px" }}>
-                  Desafie empresas a instalar um sistema de energia solar ou
-                  criar um plano de eficiência energética.
-                </Typography>
-                <Chip
-                  label="🏢 Empresas"
-                  sx={{
-                    backgroundColor: "var(--bg-chip)",
-                    color: "var(--light-text)",
-                    letterSpacing: "1px",
-                  }}
-                />
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-        {/* Sistema de Pontuação */}
-        <Box sx={{ textAlign: "center", marginTop: "50px" }}>
-          <Typography
-            variant="h3"
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            position: "relative",
+            marginTop: "20px",
+          }}
+        >
+          <IconButton
+            onClick={scrollLeft}
             sx={{
-              color: "var(--title)",
-              fontWeight: 700,
-              marginBottom: "20px",
-              fontSize: "26px",
+              position: "absolute",
+              left: "-50px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              zIndex: 3,
+              backgroundColor: "#297b4e90",
+              "&:hover": { backgroundColor: "var(--bg-button-hover)" },
+              color: "var(--light-text) 0.2",
+              height: "40px",
+              width: "40px",
             }}
           >
-            Sistema de Pontuação e Recompensas
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ marginBottom: "30px", color: "var(--light-text)" }}
-          >
-            Complete desafios para ganhar pontos e troque por recompensas, como
-            certificados e selos digitais!
-          </Typography>
-          <Button
-            variant="contained"
+            <ArrowBackIosNewIcon />
+          </IconButton>
+
+          <Box
+            ref={scrollContainer}
             sx={{
-              backgroundColor: "var(--bg-button2)",
+              display: "flex",
+              overflowX: "auto",
+              scrollBehavior: "smooth",
+              gap: 2,
+              width: "100%",
+              paddingBottom: "16px",
+              "::-webkit-scrollbar": { display: "none" },
+            }}
+          >
+            {challenges.map((challenge, index) => (
+              <Card
+                key={index}
+                sx={{
+                  margin: "10px",
+                  minWidth: "320px",
+                  height: "280px",
+                  backgroundColor: "var(--bg-card-blue)",
+                  padding: "30px",
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 10px var(--test)",
+                  transition: "0.2s",
+                  "&:hover": { transform: "scale(1.03)" },
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  textAlign: "center",
+                  // alignContent: "flex-start",
+                  cursor: "pointer",
+                }}
+              >
+                <CardContent sx={{ padding: "0" }}>
+                  <Typography
+                    variant="h5"
+                    sx={{ color: "var(--dark-text)", marginBottom: "20px" }}
+                  >
+                    {challenge.title}
+                  </Typography>
+                  <Typography variant="body">
+                    {challenge.description}
+                  </Typography>
+                  <Chip
+                    label={challenge.category}
+                    sx={{
+                      fontSize: "1rem",
+                      textTransform: "UpperCase",
+                      color: "var(--bg-chip)",
+                      border: "none",
+                      backgroundColor: "transparent",
+                      marginTop: "15px",
+                    }}
+                  />
+                </CardContent>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "var(--bg-button2)",
+                    borderColor: "var(--bg-button)2",
+                    "&:hover": {
+                      color: "var(--light-text)",
+                      backgroundColor: "#297b4e80",
+                    },
+                    textTransform: "none",
+                  }}
+                >
+                  Aceitar Desafio
+                </Button>
+              </Card>
+            ))}
+          </Box>
+
+          <IconButton
+            onClick={scrollRight}
+            sx={{
+              position: "absolute",
+              right: "-50px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              zIndex: 3,
+              backgroundColor: "#297b4e90",
+              "&:hover": { backgroundColor: "var(--bg-button-hover)" },
               color: "var(--light-text)",
-              fontSize: "15px",
-              padding: "8px 20px",
-              textTransform: "uppercase",
-              "&:hover": { backgroundColor: "var(--bg-button2)" },
+              height: "40px",
+              width: "40px",
             }}
           >
-            Comece Agora
-          </Button>
+            <ArrowForwardIosIcon />
+          </IconButton>
         </Box>
       </Container>
     </Box>

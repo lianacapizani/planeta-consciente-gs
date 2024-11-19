@@ -16,7 +16,7 @@
     padding: 20px 10px;
 }
 
-.calculator .textField , .selectForm{
+.calculator .textField, .selectForm {
     background-color: var(--bg-card-blue);
     height:60px;
     stroke: none;
@@ -41,7 +41,6 @@
                 & .MuiInputLabel-root {
                   font-size: 1.1rem;
                 }
-                & .InputLabelProps {
-                  color: "var(--dark-text)"; 
-                }
-}
+               
+              }
+  
