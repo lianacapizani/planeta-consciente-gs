@@ -15,14 +15,24 @@ Uma iniciativa para promover a sustentabilidade e inspirar ações conscientes n
 ---
 
 ## 🎥 Link do Vídeo Pitch  
-Assista ao vídeo de apresentação da solução no [YouTube](https://youtube.com) 
+Assista ao vídeo de apresentação da solução no [YouTube](https://youtu.be/nTx1yDbmu4c) 
 
 ---
 
 ## 🛠️ Instruções para Rodar o Projeto  
 ### Front-End  
-Clone o repositório com o comando `git clone https://github.com/lianacapizani/planeta-consciente.git`, navegue até a pasta do projeto com `cd planet-conscious-landingpage`, instale as dependências usando `npm install` e inicie o projeto com `npm run dev`. Acesse no navegador em `http://localhost:5173`.  
+Clone o repositório com o comando `git clone https://github.com/2024-1twdoa-global-solution-globalsolutionsgreen`, navegue até a pasta do projeto com `cd front-end`, instale as dependências usando `npm install` e inicie o projeto com `npm run dev`. Acesse no navegador em `http://localhost:5173`.  
 
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
+
+React: Biblioteca JavaScript para construção da interface de usuário.
+Vite: Ferramenta de build e desenvolvimento rápida para aplicações web.
+Material UI: Biblioteca de componentes React para criar interfaces com design consistente e responsivo.
+CSS: Estilos customizados para a interface.
 
 ---
 
