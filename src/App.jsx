@@ -9,6 +9,7 @@ import { Ambassadors } from "./components/Ambassadors/Ambassadors";
 import { Challenges } from "./components/Challenges/Challenges";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./styles/App.css";
+import "./styles/Index.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 

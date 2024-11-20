@@ -14,14 +14,15 @@
   --test: #3b403c84;
   --bg-chip: #01677e;
   
-}
 
+}
+html,
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  && {
-    background-color: #091615;
+   && {
+    background-color: var(--bg-color);
     color: var(--light-text);
   }
   box-sizing: border-box;
