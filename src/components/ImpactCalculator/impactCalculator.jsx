@@ -113,7 +113,7 @@ export function ImpactCalculator() {
               </InputLabel>
               <Select
                 labelId="renewables-label"
-                id="renewables-select"
+                id="renewables-select renewSelect"
                 value={renewables}
                 onChange={handleChange}
                 type="string"

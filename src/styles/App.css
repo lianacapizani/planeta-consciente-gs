@@ -34,8 +34,8 @@
                   }
                 }
                 & input {
-                  height: 50px;
-                  padding: 12px;
+                  height: 40px;
+                  padding: 14px;
 
                 }
                 & .MuiInputLabel-root {
@@ -44,3 +44,4 @@
                
               }
   
+              
