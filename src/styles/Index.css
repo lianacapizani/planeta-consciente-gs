@@ -13,18 +13,16 @@
   --bg-maxCard: rgba(163, 222, 211, 0.484);
   --test: #3b403c84;
   --bg-chip: #01677e;
-  
-
 }
 html,
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   && {
-    background-color: var(--bg-color);
-    color: var(--light-text);
-  }
+
+  background-color: var(--bg-color) !important;
+  color: var(--light-text);
+
   box-sizing: border-box;
   overflow-x: hidden;
 }
