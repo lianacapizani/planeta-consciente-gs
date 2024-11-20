@@ -21,10 +21,8 @@ Assista ao vídeo de apresentação da solução no [YouTube](https://youtube.co
 
 ## 🛠️ Instruções para Rodar o Projeto  
 ### Front-End  
-Clone o repositório com o comando `git clone https://github.com/seu-usuario/planeta-consciente.git`, navegue até a pasta do projeto com `cd planet-conscious-landingpage`, instale as dependências usando `npm install` e inicie o projeto com `npm start`. Acesse no navegador em `http://localhost:5173`.  
+Clone o repositório com o comando `git clone https://github.com/lianacapizani/planeta-consciente.git`, navegue até a pasta do projeto com `cd planet-conscious-landingpage`, instale as dependências usando `npm install` e inicie o projeto com `npm run dev`. Acesse no navegador em `http://localhost:5173`.  
 
-### Back-End  
-Caso exista um back-end, navegue até o diretório do mesmo com `cd backend`, instale as dependências com `npm install`, configure o arquivo `.env` com as variáveis necessárias e inicie o servidor com `npm start`. A API estará disponível em `http://localhost:5000`.  
 
 ---
 
